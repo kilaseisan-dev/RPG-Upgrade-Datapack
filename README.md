@@ -7,14 +7,14 @@ This datapack provides a block-selected upgrade system.
 Installation
 
 1. Download or clone this repository.
-2. Place the `RPG-Upgrade-Datapack` folder into your world's `datapacks` directory.
+2. Place this datapack folder into your world's `datapacks` directory.
 3. Start the world or run `/reload` in-game.
 
 Usage
 
 - Build an upgrade station:
   - Place a chest.
-  - Place a solid block above the chest.
+  - Place a solid block directly above the chest.
   - Attach a STONE_BUTTON to the solid block.
   - Put one selection block item in the chest to designate the station type:
     - Barrier -> Attack (ATK)
@@ -26,10 +26,29 @@ Usage
 
 Notes
 
-- Upgrades persist via scoreboards and attributes.
-- Uses vanilla emerald as currency; does not modify Lightman's Currency or other mods' items.
+- Upgrades persist via scoreboards and attributes and will survive logout.
+- Uses vanilla emerald as currency; does not modify or interact with Lightman's Currency.
 - Default caps (editable in mcfunction files):
   - ATK cap: 100
   - HP cap: 100 (extra HP; base health remains 20)
   - DEF cap: 20
   - SPD cap: 5
+
+Files and structure
+
+- pack.mcmeta
+- README.md
+- data/minecraft/tags/functions/load.json
+- data/minecraft/tags/functions/tick.json
+- data/rpg/functions/load.mcfunction
+- data/rpg/functions/tick.mcfunction
+- data/rpg/functions/__check_positions.mcfunction
+- data/rpg/functions/check_button.mcfunction
+- data/rpg/functions/process_chest.mcfunction
+- data/rpg/functions/update_player_attributes.mcfunction
+- data/rpg/functions/apply_speed_effect_player.mcfunction
+- data/rpg/functions/upgrade/atk.mcfunction
+- data/rpg/functions/upgrade/hp.mcfunction
+- data/rpg/functions/upgrade/def.mcfunction
+- data/rpg/functions/upgrade/speed.mcfunction
+- data/rpg/functions/reset.mcfunction
