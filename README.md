@@ -33,4 +33,3 @@ Notes
   - HP cap: 100 (extra HP; base health remains 20)
   - DEF cap: 20
   - SPD cap: 5
-
