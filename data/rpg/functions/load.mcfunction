@@ -1,5 +1,3 @@
-# rpg:load
-# Initialize scoreboard objectives and announce load
 scoreboard objectives add atk dummy ATK
 scoreboard objectives add hp dummy HP
 scoreboard objectives add def dummy DEF

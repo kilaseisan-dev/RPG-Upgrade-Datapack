@@ -34,12 +34,3 @@ Notes
   - DEF cap: 20
   - SPD cap: 5
 
-Files
-
-- pack.mcmeta
-- README.md
-- data/minecraft/tags/functions/load.json
-- data/minecraft/tags/functions/tick.json
-- data/rpg/functions/*.mcfunction
-- data/rpg/functions/upgrade/*.mcfunction
-
