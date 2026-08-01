@@ -1,3 +1,4 @@
+execute if score @s hp matches 100.. run tellraw @s [{"text":"[Upgrade] HP boost already at maximum (+100).","color":"gold"}]
 execute unless score @s hp matches 100.. run execute unless entity @s[nbt={Inventory:[{id:"minecraft:emerald"}]}] run tellraw @s [{"text":"[Upgrade] You need at least 1 emerald to upgrade.","color":"red"}]
 execute unless score @s hp matches 100.. run execute if entity @s[nbt={Inventory:[{id:"minecraft:emerald"}]}] run clear @s minecraft:emerald 1
 execute unless score @s hp matches 100.. run execute if entity @s[nbt={Inventory:[{id:"minecraft:emerald"}]}] run scoreboard players add @s hp 1

@@ -1,3 +1,4 @@
+execute if score @s def matches 20.. run tellraw @s [{"text":"[Upgrade] DEF already at maximum (20).","color":"gold"}]
 execute unless score @s def matches 20.. run execute unless entity @s[nbt={Inventory:[{id:"minecraft:emerald"}]}] run tellraw @s [{"text":"[Upgrade] You need at least 1 emerald to upgrade.","color":"red"}]
 execute unless score @s def matches 20.. run execute if entity @s[nbt={Inventory:[{id:"minecraft:emerald"}]}] run clear @s minecraft:emerald 1
 execute unless score @s def matches 20.. run execute if entity @s[nbt={Inventory:[{id:"minecraft:emerald"}]}] run scoreboard players add @s def 1

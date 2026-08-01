@@ -2,53 +2,34 @@ RPG Upgrade Datapack for Minecraft Java 1.16.5 (Forge 36.2.34)
 
 Overview
 
-This datapack provides a block-selected upgrade system.
+This datapack provides a block-selected upgrade system using a chest + stone button station and consumes emeralds from the player's inventory as currency.
+
+Station selection items (place any of these block items inside the chest to select the station type):
+- Barrier -> Attack (ATK)
+- Structure Block -> Max Health (HP) (+1 HP per use; 1 HP = 0.5 heart)
+- Jigsaw -> Defense (DEF) (increases armor attribute; max 20)
+- Command Block -> Speed (SPD) (gives Speed potion effect; max Lv5)
+- Structure Void -> Reset (resets all upgrades)
 
 Installation
 
-1. Download or clone this repository.
-2. Place this datapack folder into your world's `datapacks` directory.
-3. Start the world or run `/reload` in-game.
+1. Place this folder into the world's datapacks directory.
+2. Start the world or run /reload in-game.
 
-Usage
+How to build a station
 
-- Build an upgrade station:
-  - Place a chest.
-  - Place a solid block directly above the chest.
-  - Attach a STONE_BUTTON to the solid block.
-  - Put one selection block item in the chest to designate the station type:
-    - Barrier -> Attack (ATK)
-    - Structure Block -> Max Health (HP)
-    - Jigsaw -> Defense (DEF)
-    - Command Block -> Speed (SPD)
-    - Structure Void -> Reset (reset all upgrades)
-- Stand near the station and press the STONE_BUTTON. The datapack will consume 1 emerald from your inventory and apply the upgrade.
+1. Place a chest.
+2. Place a solid block directly above that chest.
+3. Attach a STONE_BUTTON to the solid block.
+4. Place one of the selector block items in the chest to choose the station type.
+5. Stand near the button and press it. The datapack will attempt to take 1 emerald from your inventory and apply the upgrade.
 
 Notes
 
-- Upgrades persist via scoreboards and attributes and will survive logout.
-- Uses vanilla emerald as currency; does not modify or interact with Lightman's Currency.
-- Default caps (editable in mcfunction files):
+- Upgrades are persistent via scoreboard objectives and are re-applied automatically every tick.
+- This datapack uses vanilla emeralds as currency and does not modify or interact with Lightman's Currency or AoA items.
+- Default caps:
   - ATK cap: 100
-  - HP cap: 100 (extra HP; base health remains 20)
+  - HP cap: 100 (extra HP)
   - DEF cap: 20
   - SPD cap: 5
-
-Files and structure
-
-- pack.mcmeta
-- README.md
-- data/minecraft/tags/functions/load.json
-- data/minecraft/tags/functions/tick.json
-- data/rpg/functions/load.mcfunction
-- data/rpg/functions/tick.mcfunction
-- data/rpg/functions/__check_positions.mcfunction
-- data/rpg/functions/check_button.mcfunction
-- data/rpg/functions/process_chest.mcfunction
-- data/rpg/functions/update_player_attributes.mcfunction
-- data/rpg/functions/apply_speed_effect_player.mcfunction
-- data/rpg/functions/upgrade/atk.mcfunction
-- data/rpg/functions/upgrade/hp.mcfunction
-- data/rpg/functions/upgrade/def.mcfunction
-- data/rpg/functions/upgrade/speed.mcfunction
-- data/rpg/functions/reset.mcfunction
